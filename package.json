@@ -1,5 +1,5 @@
 {
-  "name": "github-portfolio",
+  "name": "nwhite89.github.io",
   "version": "0.0.1",
   "description": "My portfolio on GitHub pages",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/nwhite89/portfolio.git"
+    "url": "git://github.com/nwhite89/nwhite89.github.io.git"
   },
   "author": "Nick White <nickswhite89@gmail.co.uk>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nwhite89/portfolio/issues"
+    "url": "https://github.com/nwhite89/nwhite89.github.io/issues"
   },
-  "homepage": "https://github.com/nwhite89/portfolio",
+  "homepage": "https://github.com/nwhite89/nwhite89.github.io",
   "devDependencies": {
     "bower": "~1.3.12",
     "grunt": "~0.4.5",
