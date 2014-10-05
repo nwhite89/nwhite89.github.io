@@ -1,5 +1,5 @@
 {
-  "name": "github-portfolio",
+  "name": "nwhite89.github.io",
   "version": "0.0.1",
   "description": "My portfolio on GitHub pages",
   "author": "Nick White <nickswhite89@gmail.co.uk>",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/nwhite89/portfolio.git"
+    "url": "git://github.com/nwhite89/nwhite89.github.io.git"
   },
   "main": "index.js",
   "devDependencies": {
