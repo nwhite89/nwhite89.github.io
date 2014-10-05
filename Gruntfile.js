@@ -5,15 +5,22 @@ module.exports = function (grunt) {
         concat: {
             dev: {
                 src: [
-                    'vendor/angular/angular.js',
-                    'vendor/angular-resource/angular-resource.js',
-                    'vendor/angular-sanitize/angular-sanitize.js',
-                    'vendor/ng-lodash/build/ng-lodash.js',
                     'src/js/*.js',
                     'src/js/**/*-setup.js',
                     'src/**/*.js'
                 ],
                 dest: 'www/app.js'
+            },
+            vendor: {
+                src: [
+                    'vendor/angular/angular.js',
+                    'vendor/angular-resource/angular-resource.js',
+                    'vendor/angular-sanitize/angular-sanitize.js',
+                    'vendor/ng-lodash/build/ng-lodash.js',
+                    'www/app.js'
+                ],
+                dest: 'www/app.js'
+
             }
         },
         connect: {
@@ -74,15 +81,51 @@ module.exports = function (grunt) {
                 '!node_modules/**'
             ]
         },
+        ngAnnotate: {
+            options: {
+                singleQuotes: true
+            },
+            dist: {
+                files: {
+                    'www/app.js': [
+                        'www/app.js'
+                    ]
+                }
+            }
+        },
         sass: {
             options: {
                 includePaths: [
                     'vendor/bootstrap-sass-official/assets/stylesheets'
                 ].concat(require('node-bourbon').includePaths)
             },
-            dist: {
+            dev: {
                 files: {
                     'www/main.css': 'src/sass/template.scss'
+                }
+            },
+            dist: {
+                options: {
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    'www/main.min.css': 'www/main.css'
+                }
+            }
+        },
+        uglify: {
+            dist: {
+                options: {
+                    compress: {
+                        unused: false
+                    },
+                    banner: '/** Nick White - ' +
+                        '<%= grunt.template.today(\'yyyy-mm-dd\') %> **/\n'
+                },
+                files: {
+                    'www/app.min.js': [
+                        'www/app.js'
+                    ]
                 }
             }
         },
@@ -117,6 +160,14 @@ module.exports = function (grunt) {
         'copy:api',
         'copy:templates',
         'concat:dev',
+        'ngAnnotate:dist',
+        'concat:vendor',
+        'sass:dev'
+    ]);
+
+    grunt.registerTask('dist', [
+        'build',
+        'uglify:dist',
         'sass:dist'
     ]);
 
