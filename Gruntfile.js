@@ -2,12 +2,16 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
+        clean: {
+            dist: ['tmp']
+        },
         concat: {
             dev: {
                 src: [
                     'src/js/*.js',
                     'src/js/**/*-setup.js',
-                    'src/**/*.js'
+                    'src/**/*.js',
+                    'tmp/**/*.js'
                 ],
                 dest: 'www/app.js'
             },
@@ -41,12 +45,6 @@ module.exports = function (grunt) {
                 flatten: true,
                 dest: 'www/api/',
                 src: 'src/**/*.json'
-            },
-            templates: {
-                src: 'src/templates/**/*.tmpl.html',
-                dest: 'www/tmpl/',
-                flatten: true,
-                expand: true
             }
         },
         imagemin: {
@@ -90,6 +88,25 @@ module.exports = function (grunt) {
                     'www/app.js': [
                         'www/app.js'
                     ]
+                }
+            }
+        },
+        ngtemplates: {
+            dist: {
+                src: 'src/**/*.tmpl.html',
+                dest: 'tmp/js/templates/templates.js',
+                options: {
+                    standalone: true,
+                    module: 'app.templates',
+                    htmlmin: {
+                        collapseBooleanAttributes: true,
+                        collapseWhitespace: true,
+                        removeComments: true,
+                        removeStyleLinkTypeAttributes: true
+                    },
+                    url: function (url) {
+                        return url.replace('src/templates/', 'tmpl/');
+                    }
                 }
             }
         },
@@ -158,8 +175,9 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'copy:html',
         'copy:api',
-        'copy:templates',
+        'ngtemplates',
         'concat:dev',
+        'clean:dist',
         'ngAnnotate:dist',
         'concat:vendor',
         'sass:dev'
