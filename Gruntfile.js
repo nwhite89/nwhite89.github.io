@@ -96,13 +96,16 @@ module.exports = function (grunt) {
                 src: 'src/**/*.tmpl.html',
                 dest: 'tmp/js/templates/templates.js',
                 options: {
-                    standalone: false,
+                    standalone: true,
                     module: 'app.templates',
                     htmlmin: {
                         collapseBooleanAttributes: true,
                         collapseWhitespace: true,
                         removeComments: true,
                         removeStyleLinkTypeAttributes: true
+                    },
+                    url: function (url) {
+                        return url.replace('src/templates/', 'tmpl/');
                     }
                 }
             }
@@ -173,8 +176,8 @@ module.exports = function (grunt) {
         'copy:html',
         'copy:api',
         'ngtemplates',
-        'clean:dist',
         'concat:dev',
+        'clean:dist',
         'ngAnnotate:dist',
         'concat:vendor',
         'sass:dev'
