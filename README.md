@@ -12,6 +12,12 @@ My portfolio using GitHub pages.
 - Serve for development using ``grunt serve``
 - Build for dist (ready for serving using GitHub pages in branch ``master``) using ``grunt dist``
 
+Style Guide for JS uses [Rockabox JS Linter](https://github.com/rockabox/rb-js-linter).
+- 120 length instead of 80
+- JSHint config
+- JSCS config
+- Editor config
+
 Uses:
 
 - Lint
