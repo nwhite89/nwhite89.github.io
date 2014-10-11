@@ -110,6 +110,34 @@ module.exports = function (grunt) {
                 }
             }
         },
+        processhtml: {
+            dev: {
+                options: {
+                    data: {
+                        css: 'main.css',
+                        js: 'app.js'
+                    }
+                },
+                files: {
+                    'www/index.html': [
+                        'src/html/index.html'
+                    ]
+                }
+            },
+            dist: {
+                options: {
+                    data: {
+                        css: 'main.min.css',
+                        js: 'app.min.js'
+                    }
+                },
+                files: {
+                    'www/index.html': [
+                        'src/html/index.html'
+                    ]
+                }
+            }
+        },
         sass: {
             options: {
                 includePaths: [
@@ -187,11 +215,13 @@ module.exports = function (grunt) {
         'build',
         'imagemin',
         'uglify:dist',
-        'sass:dist'
+        'sass:dist',
+        'processhtml:dist'
     ]);
 
     grunt.registerTask('serve', [
         'build',
+        'processhtml:dev',
         'connect:server'
     ]);
 
