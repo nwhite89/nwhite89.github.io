@@ -51,7 +51,9 @@
             </div>
             <div class="col-md-12">
                 <span ng-repeat="item in instagram">
-                    <img ng-src="{{ item.thumbnail_url }}" class="instagram-image" width="150" height="150">
+                    <a ng-href="{{ item.link }}" title="{{ item.caption.text }}" target="_blank" class="thumbnail">
+                        <img ng-src="{{ item.images.low_resolution.url }}" class="instagram-image" width="150" height="150">
+                    </a>
                 </span>
             </div>
         </div>
