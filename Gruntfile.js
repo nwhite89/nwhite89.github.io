@@ -182,7 +182,8 @@ module.exports = function (grunt) {
                     'src/**/*.html'
                 ],
                 tasks: [
-                    'build'
+                    'build',
+                    'processhtml:dev'
                 ],
                 options: {
                     livereload: true
@@ -222,6 +223,7 @@ module.exports = function (grunt) {
     grunt.registerTask('serve', [
         'build',
         'processhtml:dev',
+        'imagemin',
         'connect:server'
     ]);
 
