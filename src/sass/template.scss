@@ -9,6 +9,7 @@ $font-dafoe: 'Mr Dafoe', cursive;
 
 @import "imports/custom-mixins";
 @import "imports/bootstrap";
+@import "imports/project-sprites";
 
 body {
     font-family: $font-roboto;
