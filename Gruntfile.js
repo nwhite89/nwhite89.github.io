@@ -49,12 +49,24 @@ module.exports = function (grunt) {
         },
         imagemin: {
             dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/',
-                    src: ['img/projects/**/*.{png,jpg,gif}'],
-                    dest: 'www/'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/',
+                        src: [
+                            'img/projects/*.{png,jpg,gif}'
+                        ],
+                        dest: 'www/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'tmp/project-thumbnails/',
+                        src: [
+                            'sprite.png'
+                        ],
+                        dest: 'www/img/projects/thumbnails/'
+                    }
+                ]
             }
         },
         jscs: {
@@ -161,7 +173,7 @@ module.exports = function (grunt) {
         sprite:{
             all: {
                 src: 'src/img/projects/thumbnails/*',
-                destImg: 'www/img/projects/thumbnails/project-thumbnails.png',
+                destImg: 'tmp/project-thumbnails/sprite.png',
                 destCSS: 'src/sass/imports/_project-sprites.scss',
                 imgPath: 'img/projects/thumbnails/sprite.png',
                 cssFormat: 'css'
@@ -224,16 +236,19 @@ module.exports = function (grunt) {
 
     grunt.registerTask('dist', [
         'build',
+        'sprite',
         'imagemin',
         'uglify:dist',
         'sass:dist',
-        'processhtml:dist'
+        'processhtml:dist',
+        'clean'
     ]);
 
     grunt.registerTask('serve', [
+        'sprite',
+        'imagemin',
         'build',
         'processhtml:dev',
-        'imagemin',
         'connect:server'
     ]);
 
