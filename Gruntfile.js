@@ -158,6 +158,15 @@ module.exports = function (grunt) {
                 }
             }
         },
+        sprite:{
+            all: {
+                src: 'src/img/projects/thumbnails/*',
+                destImg: 'www/img/projects/thumbnails/project-thumbnails.png',
+                destCSS: 'src/sass/imports/_project-sprites.scss',
+                imgPath: 'img/projects/thumbnails/sprite.png',
+                cssFormat: 'css'
+            }
+        },
         uglify: {
             dist: {
                 options: {
@@ -193,6 +202,7 @@ module.exports = function (grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-spritesmith');
 
     // Set's up linting task
     grunt.registerTask('lint', [
