@@ -34,7 +34,7 @@
     "grunt-ng-annotate": "~0.4.0",
     "grunt-ng-template": "~0.1.1",
     "grunt-processhtml": "~0.3.3",
-    "grunt-sass": "~0.14.2",
+    "grunt-sass": "~0.15.0",
     "load-grunt-tasks": "~0.6.0",
     "node-bourbon": "~1.2.3"
   }

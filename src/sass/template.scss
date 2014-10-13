@@ -9,10 +9,6 @@ $font-dafoe: 'Mr Dafoe', cursive;
 
 @import "imports/custom-mixins";
 @import "imports/bootstrap";
-/* @import "compass/css3";
-@import "compass/utilities"; */
-/* @include font-face("Ballpark Wiener", font-files("ballpark/ballw___-webfont.ttf", "ballpark/ballw___-webfont.woff")); */
-
 
 body {
     font-family: $font-roboto;
@@ -421,18 +417,6 @@ section {
                 }
             }
         }
-    }
-}
-
-@-skrollr-keyframes animation1 {
-    top {
-        background: black;
-        opacity: 0.5;
-    }
-
-    bottom {
-
-        background: blue;
     }
 }
 
