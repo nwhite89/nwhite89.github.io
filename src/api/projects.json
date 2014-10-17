@@ -1,6 +1,7 @@
 [{
     "id": "1",
     "title": "Mobile London Nodejs",
+    "class": "mobilelondon",
     "thumbnail": "img\/projects\/thumbnails\/mobilelondon.png",
     "image": "img\/projects\/mobilelondon.png",
     "date": "2013-05-13 12:27:58",
@@ -10,6 +11,7 @@
 }, {
     "id": "8",
     "title": "IMProve Training Ltd",
+    "class": "improve",
     "thumbnail": "img\/projects\/thumbnails\/improve.png",
     "image": "img\/projects\/improve.png",
     "date": "2013-05-12 18:08:10",
@@ -19,6 +21,7 @@
 }, {
     "id": "7",
     "title": "Mentos Money Maker",
+    "class": "mentosmoneymaker",
     "thumbnail": "img\/projects\/thumbnails\/mentosmoneymaker.png",
     "image": "img\/projects\/mentosmoneymaker.png",
     "date": "2013-04-22 14:54:27",
@@ -28,6 +31,7 @@
 }, {
     "id": "5",
     "title": "Better World Walk",
+    "class": "betterworldwalk",
     "thumbnail": "img\/projects\/thumbnails\/betterworldwalk.png",
     "image": "img\/projects\/betterworldwalk.png",
     "date": "2013-02-24 14:54:27",
@@ -37,6 +41,7 @@
 }, {
     "id": "3",
     "title": "Learning Journey",
+    "class": "learningjourney",
     "thumbnail": "img\/projects\/thumbnails\/learningjourney.png",
     "image": "img\/projects\/learningjourney.png",
     "date": "2012-12-04 13:16:30",
@@ -46,6 +51,7 @@
 }, {
     "id": "4",
     "title": "RSSB RRUKA",
+    "class": "RSSBRruka",
     "thumbnail": "img\/projects\/thumbnails\/RSSBRruka.png",
     "image": "img\/projects\/RSSBRruka.png",
     "date": "2012-12-03 13:16:30",
@@ -55,6 +61,7 @@
 }, {
     "id": "2",
     "title": "I Am Ethicon",
+    "class": "IamEthiconAwards",
     "thumbnail": "img\/projects\/thumbnails\/IamEthiconAwards.png",
     "image": "img\/projects\/IamEthiconAwards.png",
     "date": "2012-12-03 09:21:06",
@@ -64,6 +71,7 @@
 }, {
     "id": "6",
     "title": "SmartTouch",
+    "class": "smarttouch",
     "thumbnail": "img\/projects\/thumbnails\/smarttouch.png",
     "image": "img\/projects\/smarttouch.png",
     "date": "2012-12-02 00:00:00",
