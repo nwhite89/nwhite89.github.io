@@ -1,11 +1,12 @@
 define([
-], function () {
+    'templates/footer.tmpl.html'
+], function (footerTpl) {
 
     function footer () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'tmpl/footer.tmpl.html',
+            'template': footerTpl,
             'controller': 'footerCtrl'
         };
     }

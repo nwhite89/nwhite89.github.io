@@ -1,10 +1,12 @@
 define([
-], function () {
+    'templates/get-in-touch.tmpl.html'
+], function (getInTouchTpl) {
+
     function getInTouch () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'tmpl/get-in-touch.tmpl.html'
+            'template': getInTouchTpl
         };
     }
 
