@@ -1,11 +1,14 @@
-angular
-    .module('app.controllers')
-    .controller('homeCtrl', function ($scope, workingOnResource) {
+define([
+], function () {
+    function homeCtrl ($scope, workingOnResource) {
         $scope.workingAt = {
-            'title': 'Rockabox Ltd.',
-            'text': '@rockabox',
-            'link': 'http://rockabox.com'
+            'title': 'Scoota',
+            'text': '@scoota',
+            'link': 'http://scoota.com'
         };
 
         $scope.workingWith =  workingOnResource.query();
-    });
+    }
+
+    return homeCtrl;
+});

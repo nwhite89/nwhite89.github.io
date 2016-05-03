@@ -1,6 +1,6 @@
-angular
-    .module('app.controllers')
-    .controller('portfolioCtrl', function ($scope, $sce, projectResource, lodash) {
+define([
+], function () {
+    function portfolioCtrl ($scope, $sce, projectResource, lodash) {
         $scope.portfolio = true;
         $scope.projects = projectResource.query();
 
@@ -17,4 +17,7 @@ angular
         $scope.close = function () {
             $scope.portfolio = true;
         };
-    });
+    }
+
+    return portfolioCtrl;
+});
