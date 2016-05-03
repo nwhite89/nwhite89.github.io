@@ -25,6 +25,7 @@ config = {
             nodeModulesRoot
         ],
         alias: {
+            'templates': path.join(__dirname, 'src/templates')
         }
     },
 
@@ -76,11 +77,10 @@ config = {
             //     test: /\.((woff2)|(woff)|(ttf)|(eot))$/,
             //     loader: 'file-loader?name=fonts/[hash].[ext]'
             // },
-            // {
-            //     test: /\.(html)$/,
-            //     // No longer minimize html because html minifier removes extra html tags
-            //     loader: 'html-loader?minimize=false&interpolate'
-            // }
+            {
+                test: /\.(html)$/,
+                loader: 'html-loader?minimize=false&interpolate'
+            }
         ],
         noParse: [
             // We don't need to webpack "parse" pre-packaged Angular modules

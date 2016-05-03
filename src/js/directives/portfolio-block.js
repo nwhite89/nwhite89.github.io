@@ -1,10 +1,12 @@
 define([
-], function () {
+    'templates/portfolio.tmpl.html'
+], function (portfolioTpl) {
+
     function portfolio () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'tmpl/portfolio.tmpl.html',
+            'template': portfolioTpl,
             'controller': 'portfolioCtrl'
         };
     }

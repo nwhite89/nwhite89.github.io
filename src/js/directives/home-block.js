@@ -1,10 +1,12 @@
 define([
-], function () {
+    'templates/home.tmpl.html'
+], function (homeTpl) {
+
     function home () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'tmpl/home.tmpl.html',
+            'template': homeTpl,
             'controller': 'homeCtrl'
         };
     }

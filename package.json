@@ -45,6 +45,7 @@
   "dependencies": {
     "css-loader": "~0.23.1",
     "exports-loader": "~0.6.3",
+    "html-loader": "~0.4.3",
     "html-webpack-plugin": "~2.16.1",
     "webpack": "~1.13.0"
   }

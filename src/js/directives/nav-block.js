@@ -1,11 +1,12 @@
 define([
-], function () {
+    'templates/nav.tmpl.html'
+], function (navTpl) {
 
     function nav () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl':  'tmpl/nav.tmpl.html'
+            'template':  navTpl
         };
     }
 
