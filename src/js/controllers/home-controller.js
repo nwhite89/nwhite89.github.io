@@ -1,13 +1,14 @@
 define([
-], function () {
-    function homeCtrl ($scope, workingOnResource) {
+    'api/working-on.json'
+], function (workingOnJson) {
+    function homeCtrl ($scope) {
         $scope.workingAt = {
             'title': 'Scoota',
             'text': '@scoota',
             'link': 'http://scoota.com'
         };
 
-        $scope.workingWith =  workingOnResource.query();
+        $scope.workingWith =  workingOnJson;
     }
 
     return homeCtrl;
