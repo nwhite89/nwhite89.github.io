@@ -25,6 +25,7 @@ config = {
             nodeModulesRoot
         ],
         alias: {
+            'api': path.join(__dirname, 'src/api'),
             'templates': path.join(__dirname, 'src/templates')
         }
     },
@@ -77,6 +78,10 @@ config = {
             //     test: /\.((woff2)|(woff)|(ttf)|(eot))$/,
             //     loader: 'file-loader?name=fonts/[hash].[ext]'
             // },
+            {
+                test: /\.(json)$/,
+                loader: 'json-loader'
+            },
             {
                 test: /\.(html)$/,
                 loader: 'html-loader?minimize=false&interpolate'
