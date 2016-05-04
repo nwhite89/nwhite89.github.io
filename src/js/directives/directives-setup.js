@@ -9,10 +9,10 @@ define([
 
     return angular
         .module('app.directives', [])
-        .directive('about-block', about)
-        .directive('footer-block', footer)
-        .directive('get-in-touch-block', getInTouch)
-        .directive('home-block', home)
-        .directive('nav-block', nav)
-        .directive('portfolio-block', portfolio);
+        .directive('aboutBlock', about)
+        .directive('footerBlock', footer)
+        .directive('getInTouchBlock', getInTouch)
+        .directive('homeBlock', home)
+        .directive('navBlock', nav)
+        .directive('portfolioBlock', portfolio);
 });
