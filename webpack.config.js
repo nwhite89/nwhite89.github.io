@@ -26,7 +26,8 @@ config = {
         ],
         alias: {
             'api': path.join(__dirname, 'src/api'),
-            'templates': path.join(__dirname, 'src/templates')
+            'templates': path.join(__dirname, 'src/templates'),
+            'img': path.join(__dirname, 'src/img')
         }
     },
 
@@ -62,22 +63,22 @@ config = {
             //     // loader: 'style-loader?singleton!css-loader!postcss-loader',
             //     loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')
             // },
-            // {
-            //     test: /\.svg$/,
-            //     loader: 'url-loader'
-            // },
-            // {
-            //     test: /\.raw-svg$/,
-            //     loader: 'raw-loader'
-            // },
-            // {
-            //     test: /\.(jpg)$/,
-            //     loader: 'file-loader?name=images/[hash].[ext]'
-            // },
-            // {
-            //     test: /\.((woff2)|(woff)|(ttf)|(eot))$/,
-            //     loader: 'file-loader?name=fonts/[hash].[ext]'
-            // },
+            {
+                test: /\.((jpg)|(png))$/,
+                loader: 'file-loader?name=images/[hash].[ext]'
+            },
+            {
+                test: /\.((woff2)|(woff)|(ttf)|(eot))$/,
+                loader: 'file-loader?name=fonts/[hash].[ext]'
+            },
+            {
+                test: /\.(scss)$/,
+                loader: 'style!css!sass?includePaths[]=' + [
+                        path.resolve('vendor/bootstrap-sass-official/assets/stylesheets')
+                    ]
+                // loader: ExtractTextPlugin
+                // .extract('style', 'css?importLoaders=1!sass?includePaths=[]' + JSON.stringify(bourbon))
+            },
             {
                 test: /\.(json)$/,
                 loader: 'json-loader'
