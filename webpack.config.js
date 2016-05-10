@@ -1,6 +1,7 @@
 var path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
     // ngAnnotatePlugin = require('ng-annotate-webpack-plugin'),
     bowerRoot = path.join(__dirname, 'vendor'),
     nodeModulesRoot = path.join(__dirname, 'node_modules'),
@@ -40,7 +41,7 @@ config = {
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main']),
             new webpack.ResolverPlugin.FileAppendPlugin(['index.js'])
         ]),
-        // new ExtractTextPlugin('style.css'),
+        new ExtractTextPlugin('style.css'),
         new webpack.DefinePlugin({
             'ENVIRONMENT': JSON.stringify(process.env.NODE_ENV)
         }),
@@ -73,11 +74,13 @@ config = {
             },
             {
                 test: /\.(scss)$/,
-                loader: 'style!css!sass?includePaths[]=' + [
-                        path.resolve('vendor/bootstrap-sass-official/assets/stylesheets')
-                    ]
-                // loader: ExtractTextPlugin
-                // .extract('style', 'css?importLoaders=1!sass?includePaths=[]' + JSON.stringify(bourbon))
+                // loader: 'style!css!sass?includePaths[]=' + [
+                //         path.resolve('vendor/bootstrap-sass-official/assets/stylesheets')
+                //     ]
+                loader: ExtractTextPlugin.extract(
+                    'style',
+                    'css!sass'
+                )
             },
             {
                 test: /\.(json)$/,
