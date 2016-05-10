@@ -7,8 +7,9 @@ $font-color: #343642;
 $font-roboto: 'Roboto', sans-serif;
 $font-dafoe: 'Mr Dafoe', cursive;
 
+@import '~node-bourbon/assets/stylesheets/bourbon';
+@import 'imports/bootstrap';
 @import "imports/custom-mixins";
-@import "imports/bootstrap";
 @import "imports/project-sprites";
 
 body {
@@ -316,7 +317,7 @@ section {
 
             .image {
                 @include border-radius($circle-size);
-                @include opacity(0.07);
+                opactiy: 0.07;
 
                 @include transition-property(opacity);
                 @include transition-duration(0.5s);
@@ -327,7 +328,7 @@ section {
                 height: $circle-size;
 
                 &:hover {
-                    @include opacity(1);
+                    opacity: 1;
                 }
             }
         }
@@ -345,14 +346,14 @@ section {
         }
 
         .close {
-            @include opacity(1);
+            opacity: 1;
 
             font-size: 50px;
             position: absolute;
             right: 0;
 
             &:hover {
-                @include opacity(0.5);
+                opacity: 0.5;
             }
 
             a {
