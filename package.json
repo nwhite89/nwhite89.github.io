@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "bower prune && bower install",
     "test": "grunt test",
-    "start": "webpack-dev-server --content-base dist --port 8002 --history-api-fallback --debug --devtool cheap-module-eval-source-map --output-pathinfo"
+    "start": "webpack-dev-server --content-base dist --port 8000 --history-api-fallback --debug --devtool cheap-module-eval-source-map --output-pathinfo"
   },
   "repository": {
     "type": "git",
