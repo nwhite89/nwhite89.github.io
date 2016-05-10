@@ -27,6 +27,7 @@ config = {
         ],
         alias: {
             'api': path.join(__dirname, 'src/api'),
+            'bootstrap': path.join(nodeModulesRoot, 'bootstrap-sass/assets/stylesheets/bootstrap'),
             'templates': path.join(__dirname, 'src/templates'),
             'img': path.join(__dirname, 'src/img')
         }
@@ -74,9 +75,6 @@ config = {
             },
             {
                 test: /\.(scss)$/,
-                // loader: 'style!css!sass?includePaths[]=' + [
-                //         path.resolve('vendor/bootstrap-sass-official/assets/stylesheets')
-                //     ]
                 loader: ExtractTextPlugin.extract(
                     'style',
                     'css!sass'
