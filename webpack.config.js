@@ -27,6 +27,7 @@ config = {
         ],
         alias: {
             'api': path.join(__dirname, 'src/api'),
+            'html': path.join(__dirname, 'src/html'),
             'bootstrap': path.join(nodeModulesRoot, 'bootstrap-sass/assets/stylesheets/bootstrap'),
             'templates': path.join(__dirname, 'src/templates'),
             'img': path.join(__dirname, 'src/img')
