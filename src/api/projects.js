@@ -24,82 +24,73 @@ define([
             'id': '1',
             'title': 'Mobile London Nodejs',
             'class': 'mobilelondon',
-            'thumbnail': 'img\/projects\/thumbnails\/mobilelondon.png',
             'image': mobileLondonImg,
-            'date': '2013-05-13 12:27:58',
+            'date': 1368429289000,
             'text': mobileLondonHtml,
-            'url': 'http:\/\/mobilelondon.org',
-            'published': '0'
-        }, {
-            'id': '8',
+            'url': 'http://mobilelondon.org'
+        },
+        {
+            'id': '2',
             'title': 'IMProve Training Ltd',
             'class': 'improve',
-            'thumbnail': 'img\/projects\/thumbnails\/improve.png',
             'image': improveImg,
-            'date': '2013-05-12 18:08:10',
+            'date': 1368342889000,
             'text': improveHtml,
-            'url': 'http:\/\/improvetraininglimited.co.uk',
-            'published': '0'
-        }, {
-            'id': '7',
+            'url': 'http://improvetraininglimited.co.uk'
+        },
+        {
+            'id': '3',
             'title': 'Mentos Money Maker',
             'class': 'mentosmoneymaker',
-            'thumbnail': 'img\/projects\/thumbnails\/mentosmoneymaker.png',
             'image': mentosmoneymakerImg,
-            'date': '2013-04-22 14:54:27',
+            'date': 1366614889000,
             'text': mentosMoneyMakerHtml,
-            'url': 'http:\/\/on.fb.me\/15TNjeO',
-            'published': '0'
-        }, {
-            'id': '5',
+            'url': 'http://on.fb.me/15TNjeO'
+        },
+        {
+            'id': '4',
             'title': 'Better World Walk',
             'class': 'betterworldwalk',
-            'thumbnail': 'img\/projects\/thumbnails\/betterworldwalk.png',
             'image': betterworldwalkImg,
-            'date': '2013-02-24 14:54:27',
+            'date': 1366442089000,
             'text': betterworldwalkHtml,
-            'url': 'http:\/\/betterworldwalk.com',
-            'published': '0'
-        }, {
-            'id': '3',
+            'url': 'http://betterworldwalk.com'
+        },
+        {
+            'id': '5',
             'title': 'Learning Journey',
             'class': 'learningjourney',
-            'thumbnail': 'img\/projects\/thumbnails\/learningjourney.png',
             'image': learningjourneyImg,
-            'date': '2012-12-04 13:16:30',
+            'date': 1354605289000,
             'text': learningjourneyHtml,
-            'url': 'http:\/\/mylearningjourney.acuvue.co.uk\/',
-            'published': '0'
-        }, {
-            'id': '4',
+            'url': 'http://mylearningjourney.acuvue.co.uk/'
+        },
+        {
+            'id': '6',
             'title': 'RSSB RRUKA',
             'class': 'RSSBRruka',
-            'thumbnail': 'img\/projects\/thumbnails\/RSSBRruka.png',
             'image': RSSBRrukaImg,
-            'date': '2012-12-03 13:16:30',
+            'date': 1354518889000,
             'text': RSSBRrukaHtml,
-            'url': 'http:\/\/rruka.org.uk\/',
-            'published': '0'
-        }, {
-            'id': '2',
+            'url': 'http://rruka.org.uk/'
+        },
+        {
+            'id': '7',
             'title': 'I Am Ethicon',
             'class': 'IamEthiconAwards',
-            'thumbnail': 'img\/projects\/thumbnails\/IamEthiconAwards.png',
             'image': IAmEthiconImg,
-            'date': '2012-12-03 09:21:06',
+            'date': 1354432489000,
             'text': IAmEthiconHtml,
-            'url': '',
-            'published': '0'
-        }, {
-            'id': '6',
+            'url': ''
+        },
+        {
+            'id': '8',
             'title': 'SmartTouch',
             'class': 'smarttouch',
-            'thumbnail': 'img\/projects\/thumbnails\/smarttouch.png',
             'image': smarttouchImg,
-            'date': '2012-12-02 00:00:00',
+            'date': 1354346089000,
             'text': smarttouchHtml,
-            'url': '',
-            'published': '0'
+            'url': ''
         }]
     };
 
