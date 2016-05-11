@@ -184,22 +184,22 @@ section {
     }
 
     &.home {
-        -skrollr-animation-name:animation1;
-
         position: relative;
         top: 0;
         left: 0;
 
-        padding: 14em 0 12em 0;
         width: 100%;
-        height: auto;
+        height: calc(100vh);
         color: $white-color;
         margin: 0;
 
         header {
-            text-align: center;
             position: relative;
             z-index: 1;
+            top: 50%;
+            margin-top: -120px;
+            height: 240px;
+            text-align: center;
 
             h1 {
                 margin-bottom: 0;
