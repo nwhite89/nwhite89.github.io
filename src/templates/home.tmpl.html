@@ -3,7 +3,8 @@
         <h1>Nick White</h1>
         <h2>Software Engineer</h2>
         <p>
-            <a href="workingAt.title" target="_blank">{{ workingAt.text }}</a> working with
+            <a title="{{workingAt.title}}" href="{{workingAt.link}}" target="_blank">
+                {{ workingAt.text }}</a> working with
             <a
                 ng-repeat="with in workingWith"
                 target="_blank"
