@@ -10,7 +10,7 @@ $font-dafoe: 'Mr Dafoe', cursive;
 @import '~node-bourbon/assets/stylesheets/bourbon';
 @import 'imports/bootstrap';
 @import "imports/custom-mixins";
-@import "imports/project-sprites";
+@import "imports/project-thumbnails";
 
 body {
     font-family: $font-roboto;

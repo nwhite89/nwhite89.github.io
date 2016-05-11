@@ -1,9 +1,9 @@
 define([
-    'api/projects.json'
-], function (projectsJson) {
+    'api/projects.js'
+], function (projectsInfo) {
     function portfolioCtrl ($scope, $sce, lodash) {
         $scope.portfolio = true;
-        $scope.projects = projectsJson;
+        $scope.projects = projectsInfo.data;
 
         $scope.showPortfolio = function (pid) {
             $scope.portfolio = false;

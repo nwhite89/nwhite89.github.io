@@ -60,11 +60,6 @@ config = {
 
     module: {
         loaders: [
-            // {
-            //     test: /\.css$/,
-            //     // loader: 'style-loader?singleton!css-loader!postcss-loader',
-            //     loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')
-            // },
             {
                 test: /\.((jpg)|(png))$/,
                 loader: 'file-loader?name=images/[hash].[ext]'
