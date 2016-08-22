@@ -1,7 +1,7 @@
 define([
     'api/projects.js'
 ], function (projectsInfo) {
-    function portfolioCtrl ($scope, $sce, lodash) {
+    function portfolioCtrl ($scope, $rootScope, $sce, lodash) {
         $scope.portfolio = true;
         $scope.projects = projectsInfo.data;
 
@@ -13,10 +13,13 @@ define([
             });
 
             $scope.projectText = $sce.trustAsHtml($scope.showProject.text);
+
+            $rootScope.lightboxOn = true;
         };
 
         $scope.close = function () {
             $scope.portfolio = true;
+            $rootScope.lightboxOn = false;
         };
     }
 

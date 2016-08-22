@@ -1,4 +1,6 @@
-<section class="portfolio blue" id="portfolio">
+<section class="portfolio blue" ng-class="{
+    'expanded': !portfolio
+}" id="portfolio">
     <div class="container">
         <div class="row" ng-switch="portfolio">
             <div class="col-md-12" ng-switch-when="false">
