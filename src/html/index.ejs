@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-class="{
+    lightbox: lightboxOn
+}">
     <nav-block></nav-block>
     <home-block></home-block>
     <about-block></about-block>

@@ -18,6 +18,12 @@ body {
     font-weight: 100;
     line-height: 1.5;
 
+    &.lightbox {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
     h1 {
         font-family: $font-dafoe;
         margin-bottom: 20px;
@@ -279,6 +285,20 @@ section {
 
         .row {
             position: relative;
+        }
+
+        &.expanded {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            overflow-y: scroll;
+        }
+
+        &.hidden {
+            display: none;
         }
 
         .work {
