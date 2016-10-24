@@ -4,9 +4,9 @@ define([
     function portfolioCtrl ($scope, $rootScope, $sce, lodash) {
         $scope.portfolio = true;
 
-        $scope.projects = lodash.sortBy(projectsInfo.data, function (project) {
-            return project.date;
-        }, '-');
+        $scope.projects = projectsInfo.data.slice().sort(function (a, b) {
+            return a.date > b.date ? -1 : 1;
+        });
 
         /**
          * Display a particular project within a lightbox.
