@@ -1,10 +1,14 @@
-// Setup project
-angular
-    .module('app.directives')
-    .directive('navBlock', function () {
+define([
+    'templates/nav.tmpl.html'
+], function (navTpl) {
+
+    function nav () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl':  'tmpl/nav.tmpl.html'
+            'template':  navTpl
         };
-    });
+    }
+
+    return nav;
+});

@@ -5,28 +5,23 @@
         "link": "http://nodejs.org"
     },
     {
-        "title": "Angular JS Framework by Google",
-        "text": "Angular JS",
+        "title": "Angular 2",
+        "text": "Angular 2",
+        "link": "http://angular.io/"
+    },
+    {
+        "title": "Angular 1",
+        "text": "Angular 1",
         "link": "https://angularjs.org"
     },
     {
-        "title": "Lo-dash",
-        "text": "Lo-dash",
-        "link": "http://lodash.com"
+        "title": "Webpack",
+        "text": "Wepback",
+        "link": "http://webpack.github.io"
     },
     {
-        "title": "Syntactically Awesome StyleSheets",
-        "text": "SASS",
-        "link": "http://sass-lang.com"
-    },
-    {
-        "title": "Bower Package Manager",
-        "text": "Bower",
-        "link": "http://bower.io"
-    },
-    {
-        "title": "Grunt JavaScript task runner",
-        "text": "Grunt",
-        "link": "http://gruntjs.com"
+        "title": "Docker",
+        "text": "Docker",
+        "link": "http://docker.com"
     }
 ]

@@ -1,10 +1,15 @@
-angular
-    .module('app.directives')
-    .directive('aboutBlock', function () {
+define([
+    'templates/about.tmpl.html'
+], function (aboutTpl) {
+
+    function aboutDirective () {
         return {
             'restrict': 'E',
             'replace': true,
-            'templateUrl': 'tmpl/about.tmpl.html',
+            'template': aboutTpl,
             'controller': 'aboutCtrl'
         };
-    });
+    }
+
+    return aboutDirective;
+});

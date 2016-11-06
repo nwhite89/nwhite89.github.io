@@ -1,7 +1,11 @@
-<section class="portfolio blue" id="portfolio">
+<section class="portfolio blue" ng-class="{
+    'expanded': !portfolio
+}" id="portfolio">
     <div class="container">
         <div class="row" ng-switch="portfolio">
             <div class="col-md-12" ng-switch-when="false">
+                <div class="nav left" ng-click="portfolioNav('left', showProject.id)">&lt;</div>
+                <div class="nav right" ng-click="portfolioNav('right', showProject.id)">&gt;</div>
                 <div class="close">
                     <a href="" class="fa fa-times" ng-click="close();"></a>
                 </div>
@@ -9,7 +13,7 @@
                 <img class="project-image" ng-src="{{ showProject.image }}" alt="Image of {{ showProject.title }}">
 
                 <div class="link">
-                    <a ng-if="showProject.url !== ''" href="{{ showProject.url }}" class="site-link">Go to Site</a>
+                    <a ng-if="showProject.url !== ''" href="{{ showProject.url }}" class="site-link" target="_blank">Go to Site</a>
                 </div>
 
                 <div class="aboutProject">
@@ -24,7 +28,7 @@
                             <p>
                                 {{ project.title }}
                             </p>
-                            <div class="image icon-{{ project.class }}"></div>
+                            <div class="image project-icon icon-{{ project.class }}"></div>
                         </div>
                     </div>
                 </div>

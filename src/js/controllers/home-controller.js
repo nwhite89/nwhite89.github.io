@@ -1,11 +1,15 @@
-angular
-    .module('app.controllers')
-    .controller('homeCtrl', function ($scope, workingOnResource) {
+define([
+    'api/working-on.json'
+], function (workingOnJson) {
+    function homeCtrl ($scope) {
         $scope.workingAt = {
-            'title': 'Rockabox Ltd.',
-            'text': '@rockabox',
-            'link': 'http://rockabox.com'
+            'title': 'Scoota',
+            'text': '@scoota',
+            'link': 'http://scoota.com'
         };
 
-        $scope.workingWith =  workingOnResource.query();
-    });
+        $scope.workingWith =  workingOnJson;
+    }
+
+    return homeCtrl;
+});

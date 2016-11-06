@@ -2,73 +2,6 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
-        clean: {
-            dist: ['tmp']
-        },
-        concat: {
-            dev: {
-                src: [
-                    'src/js/*.js',
-                    'src/js/**/*-setup.js',
-                    'src/**/*.js',
-                    'tmp/**/*.js'
-                ],
-                dest: 'www/app.js'
-            },
-            vendor: {
-                src: [
-                    'vendor/angular/angular.js',
-                    'vendor/angular-resource/angular-resource.js',
-                    'vendor/angular-sanitize/angular-sanitize.js',
-                    'vendor/ng-lodash/build/ng-lodash.js',
-                    'www/app.js'
-                ],
-                dest: 'www/app.js'
-
-            }
-        },
-        connect: {
-            server: {
-                options: {
-                    port: 8080,
-                    base: 'www'
-                }
-            }
-        },
-        copy: {
-            html: {
-                src: 'src/html/index.html',
-                dest: 'www/index.html'
-            },
-            api: {
-                expand: true,
-                flatten: true,
-                dest: 'www/api/',
-                src: 'src/**/*.json'
-            }
-        },
-        imagemin: {
-            dynamic: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/',
-                        src: [
-                            'img/projects/*.{png,jpg,gif}'
-                        ],
-                        dest: 'www/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'tmp/project-thumbnails/',
-                        src: [
-                            'sprite.png'
-                        ],
-                        dest: 'www/img/projects/thumbnails/'
-                    }
-                ]
-            }
-        },
         jscs: {
             options: {
                 config: '.jscsrc'
@@ -80,141 +13,17 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             src: [
-                '**/*.js',
-                '!vendor/**',
-                '!node_modules/**',
-                '!www/**'
+                'src/**/*.js',
+                '*.js'
             ],
             json: [
-                '**/*.json',
-                '!vendor/**',
-                '!node_modules/**'
+                'src/**/*.json',
+                '*.json'
             ]
-        },
-        ngAnnotate: {
-            options: {
-                singleQuotes: true
-            },
-            dist: {
-                files: {
-                    'www/app.js': [
-                        'www/app.js'
-                    ]
-                }
-            }
-        },
-        ngtemplates: {
-            dist: {
-                src: 'src/**/*.tmpl.html',
-                dest: 'tmp/js/templates/templates.js',
-                options: {
-                    standalone: true,
-                    module: 'app.templates',
-                    htmlmin: {
-                        collapseBooleanAttributes: true,
-                        collapseWhitespace: true,
-                        removeComments: true,
-                        removeStyleLinkTypeAttributes: true
-                    },
-                    url: function (url) {
-                        return url.replace('src/templates/', 'tmpl/');
-                    }
-                }
-            }
-        },
-        processhtml: {
-            dev: {
-                options: {
-                    data: {
-                        css: 'main.css',
-                        js: 'app.js'
-                    }
-                },
-                files: {
-                    'www/index.html': [
-                        'src/html/index.html'
-                    ]
-                }
-            },
-            dist: {
-                options: {
-                    data: {
-                        css: 'main.min.css',
-                        js: 'app.min.js'
-                    }
-                },
-                files: {
-                    'www/index.html': [
-                        'src/html/index.html'
-                    ]
-                }
-            }
-        },
-        sass: {
-            options: {
-                includePaths: [
-                    'vendor/bootstrap-sass-official/assets/stylesheets'
-                ].concat(require('node-bourbon').includePaths)
-            },
-            dev: {
-                files: {
-                    'www/main.css': 'src/sass/template.scss'
-                }
-            },
-            dist: {
-                options: {
-                    outputStyle: 'compressed'
-                },
-                files: {
-                    'www/main.min.css': 'www/main.css'
-                }
-            }
-        },
-        sprite:{
-            all: {
-                src: 'src/img/projects/thumbnails/*',
-                destImg: 'tmp/project-thumbnails/sprite.png',
-                destCSS: 'src/sass/imports/_project-sprites.scss',
-                imgPath: 'img/projects/thumbnails/sprite.png',
-                cssFormat: 'css'
-            }
-        },
-        uglify: {
-            dist: {
-                options: {
-                    compress: {
-                        unused: false
-                    },
-                    banner: '/** Nick White - ' +
-                        '<%= grunt.template.today(\'yyyy-mm-dd\') %> **/\n'
-                },
-                files: {
-                    'www/app.min.js': [
-                        'www/app.js'
-                    ]
-                }
-            }
-        },
-        watch: {
-            dev: {
-                files: [
-                    'src/**/*.js',
-                    'src/**/*.scss',
-                    'src/**/*.html'
-                ],
-                tasks: [
-                    'build',
-                    'processhtml:dev'
-                ],
-                options: {
-                    livereload: true
-                }
-            }
         }
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.loadNpmTasks('grunt-spritesmith');
 
     // Set's up linting task
     grunt.registerTask('lint', [
@@ -223,46 +32,7 @@ module.exports = function (grunt) {
         'jscs:src'
     ]);
 
-    grunt.registerTask('build', [
-        'copy:html',
-        'copy:api',
-        'ngtemplates',
-        'concat:dev',
-        'clean:dist',
-        'ngAnnotate:dist',
-        'concat:vendor',
-        'sass:dev'
-    ]);
-
-    grunt.registerTask('dist', [
-        'build',
-        'sprite',
-        'imagemin',
-        'uglify:dist',
-        'sass:dist',
-        'processhtml:dist',
-        'clean'
-    ]);
-
-    grunt.registerTask('serve', [
-        'sprite',
-        'imagemin',
-        'build',
-        'processhtml:dev',
-        'connect:server'
-    ]);
-
-    grunt.registerTask('dev', [
-        'serve',
-        'watch'
-    ]);
-
     // Test task, to run tests for the project
     grunt.registerTask('test', ['lint']);
-
-    // Grunt default taske (run linting first then set up serve)
-    grunt.registerTask('default', [
-        'lint',
-        'dev'
-    ]);
+    grunt.registerTask('default', ['test']);
 };
