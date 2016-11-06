@@ -13,7 +13,7 @@
                 <img class="project-image" ng-src="{{ showProject.image }}" alt="Image of {{ showProject.title }}">
 
                 <div class="link">
-                    <a ng-if="showProject.url !== ''" href="{{ showProject.url }}" class="site-link">Go to Site</a>
+                    <a ng-if="showProject.url !== ''" href="{{ showProject.url }}" class="site-link" target="_blank">Go to Site</a>
                 </div>
 
                 <div class="aboutProject">
@@ -28,7 +28,7 @@
                             <p>
                                 {{ project.title }}
                             </p>
-                            <div class="image icon-{{ project.class }}"></div>
+                            <div class="image project-icon icon-{{ project.class }}"></div>
                         </div>
                     </div>
                 </div>
