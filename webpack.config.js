@@ -89,7 +89,6 @@ config = {
             // We don't need to webpack "parse" pre-packaged Angular modules
             path.join(bowerRoot, '/angular'),
             path.join(bowerRoot, '/angular-resource'),
-            path.join(bowerRoot, '/angular-sanitize'),
             path.join(bowerRoot, '/bootstrap-sass-official'),
             path.join(bowerRoot, '/jquery'),
             path.join(bowerRoot, '/ng-lodash')
