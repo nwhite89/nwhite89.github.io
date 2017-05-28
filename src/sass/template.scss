@@ -62,10 +62,16 @@ body {
 
 nav {
 
+    &.navbar-fixed-top {
+        border: 0;
+    }
+
     &.navbar-inverse {
         .navbar-nav {
             > li {
                 a {
+                    transition: background-color 200ms linear;
+
                     &:hover {
 
                         &.about {
