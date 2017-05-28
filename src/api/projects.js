@@ -13,6 +13,7 @@ define([
     'img/projects/formats-page-shift.png',
     'img/projects/formats-page-shells.png',
     'img/projects/formats-parallax-dmpu.png',
+    'img/projects/formats-parascroll.png',
     'html/projects/mobile-london.html',
     'html/projects/improve-training.html',
     'html/projects/mentos-money.html',
@@ -26,12 +27,14 @@ define([
     'html/projects/page-shell.html',
     'html/projects/page-shift.html',
     'html/projects/parallax.html',
-    'html/projects/prism.html'
+    'html/projects/prism.html',
+    'html/projects/parascroll.html'
 ], function (mobileLondonImg, improveImg, betterworldwalkImg, learningjourneyImg, RSSBRrukaImg,
     IAmEthiconImg, smarttouchImg, mentosmoneymakerImg, rigDistributeImg, rigCreateImg, formatsPrismImg,
-    formatsPageShiftImg, formatsPageShellsImg, formatsParallaxDmpuImg, mobileLondonHtml, improveHtml,
-    mentosMoneyMakerHtml, betterworldwalkHtml, learningjourneyHtml, RSSBRrukaHtml, IAmEthiconHtml, smarttouchHtml,
-    rigDistributeHtml, rigCreateHtml, pageShellHtml, pageShiftHtml, parallaxHtml, prismHtml) {
+    formatsPageShiftImg, formatsPageShellsImg, formatsParallaxDmpuImg, formatsParascrollImg, mobileLondonHtml,
+    improveHtml, mentosMoneyMakerHtml, betterworldwalkHtml, learningjourneyHtml, RSSBRrukaHtml, IAmEthiconHtml,
+    smarttouchHtml, rigDistributeHtml, rigCreateHtml, pageShellHtml, pageShiftHtml, parallaxHtml, prismHtml,
+    parascrollHtml) {
 
     var obj = {
         'data': [
@@ -160,6 +163,15 @@ define([
                 'date': 1477293439912,
                 'text': pageShellHtml,
                 'url': 'https://rbx3-assets.s3.amazonaws.com/demos/create/525/preview.html'
+            },
+            {
+                'id': '15',
+                'title': 'ParaScroll',
+                'class': 'formats-parascroll',
+                'image': formatsParascrollImg,
+                'date': 1495986184057,
+                'text': parascrollHtml,
+                'url': 'https://rbx3-assets.s3.amazonaws.com/qa-dev-builder/1495986030596/index.html'
             }
         ]
     };
