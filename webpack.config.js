@@ -16,7 +16,7 @@ config = {
 
     output: {
         path: path.join(__dirname),
-        publicPath: './',
+        publicPath: '/',
         filename: '[name].js'
     },
 
