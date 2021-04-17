@@ -111,10 +111,11 @@ nav {
 }
 
 section {
-    padding: 50px 0;
+    min-height: 100vh;
+    width: 100vw;
+    color: $white-color;
 
     &.red, &.blue, &.green {
-        color: $white-color;
 
         a {
             color: $white-color;
@@ -127,34 +128,6 @@ section {
         // #{headers(all)} {
         //     color: $white-color;
         // }
-    }
-
-    &.white {
-        background: $white-color no-repeat top center;
-
-        a {
-            color: $red-color;
-            border-color: rgba($red-color, 0.5);
-
-            &:hover {
-                border-color: rgba(#fff, 0);
-            }
-        }
-
-        h1, h2, h3, h4, h5 {
-            @include text-shadow(rgba($white-color, 0.2) 1px 1px 0, rgba($white-color, 0.2) 2px 2px 0, rgba($white-color, 0.2) 3px 3px 0);
-
-            color: $red-color;
-        }
-
-        .icon {
-            color: $red-color;
-
-            i {
-                @include text-shadow(rgba($white-color, 0.2) 1px 1px 0, rgba($white-color, 0.2) 2px 2px 0, rgba($white-color, 0.2) 3px 3px 0);
-            }
-
-        }
     }
 
     &.green {
@@ -178,67 +151,6 @@ section {
 
         h1 {
             font-size: 3em;
-        }
-    }
-
-    &.about {
-        position: relative;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: auto;
-        color: $font-color;
-        margin: 0;
-        text-align: center;
-
-        .me {
-            text-align: justify;
-        }
-
-        .icon {
-            font-size: 60px;
-            padding-bottom: 25px;
-
-            i {
-                line-height: 120px;
-                width: 120px;
-                height: 120px;
-            }
-        }
-
-        ul {
-            padding: 0;
-            margin: 0 0 40px;
-
-            &.skills,
-            &.github-projects {
-                list-style: none;
-            }
-
-            li {
-                margin-bottom: 10px;
-            }
-        }
-
-        span {
-            display: inline-block;
-            margin-right: 10px;
-
-            .instagram-image {
-                /* @include filter(saturate(0%) blur(0px)); */
-
-
-                &:hover {
-                    /* @include filter(none); */
-                    -moz-transition: -moz-filter 2s;
-                    -ms-transition: -ms-filter 2s;
-                    -o-transition: -o-filter 2s;
-                    transition: filter 2s;
-                    -webkit-transition: -webkit-filter 2s;
-                }
-            }
-
         }
     }
 

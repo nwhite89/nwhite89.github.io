@@ -1,23 +1,9 @@
 section {
     &.home {
-        position: relative;
-        top: 0;
-        left: 0;
-
-        width: 100vw;
-        height: 100vh;
         color: $white-color;
         background: $red-color no-repeat top center;
-        margin: 0;
 
         header {
-            position: relative;
-            z-index: 1;
-            top: 50%;
-            margin-top: -120px;
-            height: 240px;
-            text-align: center;
-
             h1 {
                 margin-bottom: 0;
             }
