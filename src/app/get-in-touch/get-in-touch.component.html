@@ -1,0 +1,26 @@
+<section class="get-in-touch green align-items-center d-flex get-in-touch green py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Get in touch with me</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            I always love hearing and seeing what new opportunities are out there so, if you fancy getting in touch with me please feel free to message me on all of the normal channels.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="icons">
+                            <li *ngFor="let method of contactMethods;">
+                                <a [href]="method.link" [title]="method.title" class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-stack-1x fa-inverse {{ method.icon }}"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
