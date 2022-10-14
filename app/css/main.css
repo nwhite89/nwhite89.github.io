@@ -2564,7 +2564,6 @@ form .inputs-description {
     background-position: -100%;
     position: relative;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -2607,7 +2606,6 @@ form .inputs-description {
     background-position: -100%;
     position: relative;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
