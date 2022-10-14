@@ -170,7 +170,7 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: '/img/backgrounds/ninja-poster.jpg',
+        { src: '/img/backgrounds/ninja-poster.png',
             video: {
                 src: [
                     '/video/ninja-beast.mp4'
