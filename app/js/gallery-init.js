@@ -38,8 +38,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 h: parseInt(size[1], 10)
             };
 
-
-
             if(figureEl.children.length > 1) {
                 // <figcaption> content
                 item.title = figureEl.children[1].innerHTML;
@@ -48,6 +46,12 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             if(linkEl.children.length > 0) {
                 // <img> thumbnail element, retrieving thumbnail url
                 item.msrc = linkEl.children[0].getAttribute('src');
+            }
+
+            if (linkEl.dataset.type === 'video') {
+                item.html = '<div class="photoswipe-vid"><video preload="auto" controls width="100%">' + linkEl.getElementsByTagName('video')[0].innerHTML + '</video></div>';
+                delete item.src;
+                delete item.msrc;
             }
 
             item.el = figureEl; // save link to element for getThumbBoundsFn
@@ -153,7 +157,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
             getThumbBoundsFn: function(index) {
                 // See Options -> getThumbBoundsFn section of documentation for more info
-                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                var thumbnail = items[index].el, // find thumbnail
                     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
                     rect = thumbnail.getBoundingClientRect();
 
@@ -193,6 +197,30 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
+
+        if (gallery.currItem.container && gallery.currItem.container.getElementsByTagName('video')[0]) {
+            gallery.currItem.container.getElementsByTagName('video')[0].play()
+        }
+
+        gallery.listen('afterChange', function () {
+            var videos = pswpElement.getElementsByTagName('video');
+            for (var index = 0; index < videos.length; index++) {
+                var element = videos[index];
+                element.pause();
+            }
+
+            if (gallery.currItem.container && gallery.currItem.container.getElementsByTagName('video')[0]) {
+                gallery.currItem.container.getElementsByTagName('video')[0].play()
+            }
+        });
+
+        gallery.listen('destroy', function () {
+            var videos = pswpElement.getElementsByTagName('video');
+            for (var index = 0; index < videos.length; index++) {
+                var element = videos[index];
+                element.pause();
+            }
+        });
     };
 
     // loop through all gallery elements and bind events
