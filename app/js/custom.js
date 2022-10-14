@@ -170,9 +170,25 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: "https://dummyimage.com/960x1440/636363/ffffff" },
-        { src: "https://dummyimage.com/960x1440/636363/ffffff" },
-        { src: "https://dummyimage.com/960x1440/636363/ffffff" }
+        { src: '/img/backgrounds/ninja-poster.jpg',
+            video: {
+                src: [
+                    '/video/ninja-beast.mp4'
+                ],
+                loop: false,
+                mute: true
+            }
+        },
+        { src: "/img/backgrounds/beast-dance-vid-poster.jpg",
+            video: {
+                src: [
+                    '/video/beast-dancing.mp4'
+                ],
+                loop: false,
+                mute: true
+            }
+        },
+        { src: "/img/backgrounds/beast-draw.jpg" },
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });
