@@ -1,0 +1,64 @@
+.contactdata
+  margin-bottom: 3rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(L)
+    margin-bottom: 0
+
+.contactdata__item
+  position: relative
+  background-color: rgba($white, 0.05)
+  box-shadow: 1px 1px 8px 1px rgb(0 0 0 / 20%)
+  padding: 3.6rem
+  height: 100%
+  min-height: 324px
+  background-repeat: no-repeat
+  background-size: auto
+  background-position: bottom -10px right -15px
+
+.contactdata__icon
+  img
+    width: auto
+
+.contactdata__title
+  font: normal 600 2rem/1.6 $default-font
+  color: $text-light
+  margin: 2rem 0 1.4rem 0
+
+.contactdata__descr
+  margin-bottom: 1.5rem
+  &:last-of-type
+    margin-bottom: 0
+
+.contactdata__icon
+  margin-right: 1rem
+  min-width: 1.4rem
+  i
+    font-size: 1.4rem
+    color: $accent-color
+
+.contactdata__text
+  font: normal 300 1.4rem/1.6 $default-font
+  p, a
+    font: normal 300 1.4rem/1.6 $default-font
+    color: $text-light-base
+
+.contactdata__socials
+  position: relative
+  display: block
+  li
+    display: block
+    font: normal 300 1.4rem/1.6 $default-font
+    color: $text-light-base
+    margin-bottom: 0.2rem
+    &:last-of-type
+      margin-bottom: 0
+    i
+      display: inline-block
+      font-size: 1.4rem
+      color: $accent-color
+      margin-right: 1rem
+      min-width: 1.4rem
+    a
+      display: inline-block
+      font: normal 300 1.4rem/1.6 $default-font
