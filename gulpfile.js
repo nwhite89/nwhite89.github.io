@@ -152,7 +152,7 @@ function buildcopy() {
     'app/css/**/*.css',
     'app/*.html',
     'app/js/**/*.js',
-    'app/fonts/**/*',
+    'app/webfonts/**/*',
     'app/video/**/*',
     'app/img/**/*',
     '!app/{img/src,img/src/**}',

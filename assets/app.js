@@ -67,7 +67,8 @@ $(function() {
       portfolioClose   = $('#portfolio-close'),
       contactTrigger   = $('#contact-trigger'),
       contactSection   = $('#contact'),
-      contactClose     = $('#contact-close');
+      contactClose     = $('#contact-close'),
+      logoTrigger      = $('#logo-trigger');
 
   menuTrigger.on("click", function(event) {
     event.preventDefault();
@@ -117,7 +118,7 @@ $(function() {
     }, 1400);
   });
 
-  $('.navigation li a').on("click", function(event) {
+  $('.navigation li a').add(logoTrigger).on("click", function(event) {
     event.preventDefault();
     $('.active').removeClass('active');
     header.addClass('animate-in');
@@ -130,6 +131,11 @@ $(function() {
   });
 
   homeTrigger.on("click", function(event) {
+    event.preventDefault();
+    mainSection.addClass('active animate-in');
+  });
+
+  logoTrigger.on("click", function(event) {
     event.preventDefault();
     mainSection.addClass('active animate-in');
   });

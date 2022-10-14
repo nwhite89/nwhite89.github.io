@@ -23155,7 +23155,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/Fontawesome/fa-solid-900.woff2") format("woff2"), url("../fonts/Fontawesome/fa-solid-900.ttf") format("truetype");
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
 }
 .fas,
 .fa-solid {
@@ -23177,7 +23177,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/Fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/Fontawesome/fa-regular-400.ttf") format("truetype");
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
 }
 .far,
 .fa-regular {
@@ -23199,7 +23199,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/Fontawesome/fa-brands-400.woff2") format("woff2"), url("../fonts/Fontawesome/fa-brands-400.ttf") format("truetype");
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");
 }
 .fab,
 .fa-brands {
@@ -27586,7 +27586,7 @@ button.swiper-pagination-bullet {
 .pswp__button,
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
-  background: url(../img/default-skin.png) 0 0 no-repeat;
+  background: url(default-skin.png) 0 0 no-repeat;
   -moz-background-size: 264px 88px;
        background-size: 264px 88px;
   width: 44px;
@@ -27598,7 +27598,7 @@ button.swiper-pagination-bullet {
   .pswp--svg .pswp__button,
 .pswp--svg .pswp__button--arrow--left:before,
 .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(../img/default-skin.svg);
+    background-image: url(default-skin.svg);
   }
 
   .pswp--svg .pswp__button--arrow--left,
@@ -27909,7 +27909,7 @@ a.pswp__share--download:hover {
 }
 .pswp__preloader--active .pswp__preloader__icn {
   /* We use .gif in browsers that don't support CSS animation */
-  background: url(../img/preloader.gif) 0 0 no-repeat;
+  background: url(preloader.gif) 0 0 no-repeat;
 }
 
 .pswp--css_animation .pswp__preloader--active {
