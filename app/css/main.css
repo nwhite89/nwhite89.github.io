@@ -3939,9 +3939,20 @@ form .inputs-description {
   z-index: 1;
 }
 .header__logo img {
-  -moz-border-radius: 80px;
-       border-radius: 80px;
-  height: 80px;
+  -moz-border-radius: 50px;
+       border-radius: 50px;
+  height: 50px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 20px;
+     -moz-box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 20px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+@media only screen and (min-width: 1200px) {
+  .header__logo img {
+    -moz-border-radius: 80px;
+         border-radius: 80px;
+    height: 80px;
+  }
 }
 
 .photoswipe-vid {
@@ -3954,4 +3965,10 @@ form .inputs-description {
 
 .pswp__top-bar {
   opacity: 1 !important;
+}
+
+.numblock {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     -moz-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
