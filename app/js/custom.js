@@ -174,6 +174,7 @@ $(function() {
       transitionDuration: 2000,
       walk: function () {
         if (this.find('video')) {
+            this.find('video').attr('autoplay', 'true');
             this.find('video').attr('playsinline', 'true');
         }
       },
