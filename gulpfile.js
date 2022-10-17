@@ -157,7 +157,6 @@ function buildcopy() {
     'app/img/**/*',
     '!app/{img/src,img/src/**}',
     'app/.htaccess',
-    'app/mail.php'
   ], { base: 'app' })
   .pipe(dest('dist'))
 }
@@ -166,7 +165,6 @@ function buildcopy() {
 function buildalljs() {
   return src([
     'assets/app.js',
-    'app/js/demo/demo.js',
     'app/js/custom.js',
     'app/js/gallery-init.js',
     'app/js/maps/*.js'
