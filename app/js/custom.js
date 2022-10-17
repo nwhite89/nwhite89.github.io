@@ -191,6 +191,15 @@ $(function() {
                 mute: true
             }
         },
+        { src: '/img/backgrounds/ninja-silicon-alley.png',
+            video: {
+                src: [
+                    '/video/beast-silicon-alley.mp4'
+                ],
+                loop: false,
+                mute: true
+            }
+        },
         { src: '/img/backgrounds/ninja-poster.png',
             video: {
                 src: [
