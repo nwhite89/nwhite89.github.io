@@ -173,10 +173,10 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: '/img/backgrounds/ninja-poster.png',
+        { src: "/img/backgrounds/beast-shapeshift.jpg",
             video: {
                 src: [
-                    '/video/ninja-beast.mp4'
+                    '/video/beast-shapeshift.mp4'
                 ],
                 loop: false,
                 mute: true
@@ -191,7 +191,15 @@ $(function() {
                 mute: true
             }
         },
-        { src: "/img/backgrounds/beast-draw.jpg" },
+        { src: '/img/backgrounds/ninja-poster.png',
+            video: {
+                src: [
+                    '/video/ninja-beast.mp4'
+                ],
+                loop: false,
+                mute: true
+            }
+        },
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });
