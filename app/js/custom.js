@@ -162,6 +162,9 @@ $(function() {
   // --------------------------------------------- //
   // Vegas Kenburns Start
   // --------------------------------------------- //
+  $.vegas.isVideoCompatible = function () {
+        return Boolean(document.createElement('video').canPlayType);
+  }
   var bgndKenburns = $('#bgndKenburns');
   if(bgndKenburns.length){
     bgndKenburns.vegas({
@@ -169,6 +172,11 @@ $(function() {
       delay: 8000,
       transition: 'fade2',
       transitionDuration: 2000,
+      walk: function () {
+        if (this.find('video')) {
+            this.find('video').attr('playsinline', 'true');
+        }
+      },
       slides: [
         { src: '/img/backgrounds/ninja-poster.png',
             video: {

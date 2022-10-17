@@ -49,7 +49,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             }
 
             if (linkEl.dataset.type === 'video') {
-                item.html = '<div class="photoswipe-vid"><video preload="auto" controls width="100%">' + linkEl.getElementsByTagName('video')[0].innerHTML + '</video></div>';
+                item.html = '<div class="photoswipe-vid"><video preload="auto" controls width="100%" playsinline>' + linkEl.getElementsByTagName('video')[0].innerHTML + '</video></div>';
                 delete item.src;
                 delete item.msrc;
             }
