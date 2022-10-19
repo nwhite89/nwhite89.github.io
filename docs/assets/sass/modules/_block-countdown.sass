@@ -1,0 +1,17 @@
+.media__countdown
+  position: relative
+  #countdown
+    position: relative
+    font: normal 600 5rem/1.2 $default-font
+    color: $text-light
+  .countdown-period
+    display: inline-block
+    margin-left: 2rem
+    letter-spacing: normal
+    text-transform: lowercase
+  +MQ(M)
+    #countdown
+      font-size: 6rem
+  +MQ(XXL)
+    #countdown
+      font-size: 7.6rem

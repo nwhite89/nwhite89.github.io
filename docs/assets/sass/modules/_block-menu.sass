@@ -1,0 +1,115 @@
+.menu
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  background-color: transparent
+  +shadow(4)
+  z-index: 10
+  transition: all 0.3s ease-in-out
+
+.menu__content
+  position: relative
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+
+.menu__data
+  position: relative
+  background-color: $base-color-dark
+  +MQ(XL)
+    height: 100%
+
+.menudata__controls
+  position: relative
+  width: 100%
+  padding: 3rem 0
+  +MQ(M)
+    padding: 5rem 0
+  +MQ(XXL)
+    padding: 6rem 0
+
+.controls__content
+  position: relative
+  padding: 0 10%
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.menudata__links
+  position: relative
+  width: 100%
+  padding: 0 10%
+  +MQ(XL)
+    position: absolute
+    left: 0
+    +center(y)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.navigation
+  position: relative
+  padding: 6rem 0
+  +MQ(XL)
+    padding: 0
+
+.menulinks__contact
+  display: block
+  text-align: left
+  padding-top: 3rem
+  li
+    display: block
+    margin-bottom: 2rem
+    font-size: 104rem
+    p, a
+      font-size: 1.4rem
+      color: $text-light-mute
+  +MQ(M)
+    padding: 6rem 0
+    text-align: right
+    li
+      &:last-of-type
+        margin-bottom: 0.2rem
+  +MQ(XL)
+    padding: 0
+
+.menudata__copyright
+  position: relative
+  padding: 0 10%
+  margin-bottom: 3rem
+  +MQ(M)
+    margin: 5rem 0
+  +MQ(XL)
+    +position(absolute, null null 5rem 8rem)
+    margin: 0
+    padding: 0
+  +MQ(XXL)
+    bottom: 6rem
+    left: 10rem
+
+.menu__media
+  position: relative
+  height: 100vh
+  min-height: 600px
+  +MQ(XL)
+    height: 100%
+    min-height: auto
+
+.media__content
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.menu__image
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  +shadow(3)
