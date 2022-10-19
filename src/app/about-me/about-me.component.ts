@@ -31,7 +31,7 @@ export class AboutMeComponent implements AfterViewInit {
         {
             position: 'Software Engineer',
             name: 'Scoota',
-            image: '/assets/img/companies/scoota.jpg',
+            image: '/assets/img/companies/scoota.png',
             href: 'https://scoota.com',
             text: "Working with Typescript, Angular 2, Django and Node JS to build Scoota's Rig distribuition platform allowing users to create, serve and monitor adverts programatically.",
         },
