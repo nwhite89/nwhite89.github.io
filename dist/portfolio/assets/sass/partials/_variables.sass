@@ -1,0 +1,34 @@
+// Fonts
+$default-font: 'Poppins', sans-serif
+$test-font: 'Public Sans', sans-serif
+
+// Colors
+$base-color: #0e0d26
+$base-color-dark: #07051c
+$accent-color: #f987d6
+$accent-color-two: #6a47af
+$additional-color: #e7acd0
+
+$white: #ffffff
+$black: #000000
+
+$text-dark: #212121
+$text-base: #676767
+$text-mute: #999999
+$text-light: #ffffff
+$text-light-base: #b3bbc3
+$text-light-mute: #9ca8b4
+
+// Gradients
+=gradient-right
+  background: linear-gradient(to right, $accent-color-two 0%, $accent-color 100%)
+=gradient-right-light
+  background: linear-gradient(to right, tint($accent-color-two, 30%) 0%, tint($accent-color, 0%) 100%)
+=gradient-bottom
+  background: linear-gradient(to bottom, $accent-color-two 0%, $accent-color 100%)
+=gradient-bottom-light
+  background: linear-gradient(to bottom, tint($accent-color-two, 30%) 0%, $accent-color 100%)
+
+// Animations
+$animation-delay: .3s
+$animation-duration: .8s
