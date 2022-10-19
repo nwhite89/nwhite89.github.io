@@ -1,0 +1,77 @@
+<section id="portfolio" class="inner active" [class.animate-in]="viewInit">
+    <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+
+            <!-- Portfolio Section Content Start -->
+            <div class="col-12 col-xl-8 inner__content">
+                <!-- desktop shadow -->
+                <div class="desktop-shadow"></div>
+                <!-- inner section blocks -->
+                <div class="inner__blocks">
+
+                    <!-- Section Container - Section Title Start -->
+                    <div class="inner__container">
+                        <div class="content-block">
+                            <span class="section__subtitle">Portfolio</span>
+                            <h2>See my featured projects.</h2>
+                            <p class="section__text">
+                                "Be what you would seem to be – or, if you’d like it put more simply – never imagine yourself not to be
+                                otherwise than what it might appear to others that what you were or <span class="text-link">might have
+                                    been</span> was not otherwise than what you had been would have appeared to them to be otherwise."
+                                    <span class="fst-italic fs-4">- Lewis Carroll</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Section Container - Section Title End -->
+
+                        <!-- Section Container - Gallery Start -->
+                        <div class="inner__container">
+                            <div class="content-block grid-block">
+                                <div class="container-fluid px-4 works__gallery">
+                                    <lightgallery [settings]="settings" class="row gx-5 my-gallery">
+                                        <ng-container *ngFor="let project of projects">
+                                            <ng-container *ngIf="project.type === 'image'">
+                                                <a class="col-12 col-md-6 my-gallery__item block-rounded-l" [attr.href]="project.src" [attr.data-sub-html]="project.subHtml">
+                                                    <img [src]="project.src" class="my-gallery__image block-rounded-l" [alt]="project.name" />
+
+                                                    <figcaption class="my-gallery__description block-rounded-l" itemprop="caption description">
+                                                        <h4>{{ project.name }} <small>{{ project.sub }}</small></h4>
+                                                    </figcaption>
+                                                </a>
+                                            </ng-container>
+                                            <ng-container *ngIf="project.type === 'video'">
+                                                <a class="col-12 col-md-6 my-gallery__item block-rounded-l" [attr.data-video]="project.video" [attr.data-poster]="project.poster"  data-lg-size="720-720" [attr.data-sub-html]="project.subHtml">
+                                                    <video preload="auto" width="100%" class="block-rounded-l my-gallery__image" onloadedmetadata="this.muted = true; this.play();" playsinline autoplay muted loop>
+                                                        <source type="video/mp4" [src]="project.src">
+                                                    </video>
+
+                                                    <figcaption class="my-gallery__description block-rounded-l" itemprop="caption description">
+                                                        <h4>{{ project.name }} <small>{{ project.sub }}</small></h4>
+                                                    </figcaption>
+                                                </a>
+                                            </ng-container>
+                                        </ng-container>
+                                    </lightgallery>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section Container - Gallery End -->
+
+                    </div>
+                </div>
+                <!-- Portfolio Section Content End -->
+
+                <!-- Portfolio Section Media Start -->
+            <div class="col-12 col-xl-4 inner__media">
+
+                <!-- Portfolio Section Image Background Start -->
+                <div class="image media-image-portfolio"></div>
+                <!-- Portfolio Section Image Background End -->
+
+            </div>
+            <!-- Portfolio Section Media End -->
+
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->

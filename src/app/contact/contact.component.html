@@ -1,0 +1,91 @@
+<section id="contact" class="inner active" [class.animate-in]="viewInit">
+    <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+
+            <!-- Contact Section Content Start -->
+            <div class="col-12 col-xl-8 inner__content">
+                <!-- desktop shadow -->
+                <div class="desktop-shadow"></div>
+                <!-- inner section blocks -->
+                <div class="inner__blocks">
+
+                    <!-- Section Container - Section Title Start -->
+                    <div class="inner__container">
+                        <div class="content-block">
+                            <span class="section__subtitle">Contact</span>
+                            <h2>Let’s get in touch.</h2>
+                            <p class="section__text">
+                                I always love hearing and seeing what new opportunities are out there so, if you fancy getting in touch
+                                with me please feel free to message me on all of the normal channels.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Section Container - Section Title End -->
+
+                    <!-- Section Container - Contact Data Start -->
+                    <div class="inner__container">
+                        <div class="content-block grid-block">
+                            <div class="container-fluid px-4">
+                                <div class="align-items-stretch gx-5 justify-content-center row">
+                                    <!-- contact data single item -->
+                                    <div class="col-12 col-md-6 contactdata">
+                                        <div class="contactdata__item contactdata-item-2 block-rounded-l">
+                                            <h5 class="contactdata__title">Follow us</h5>
+                                            <div class="contactdata__descr d-flex align-items-start">
+                                                <ul class="contactdata__socials">
+                                                    <li *ngFor="let social of socials">
+                                                        <i [class]="social.class"></i>
+                                                        <a class="contact-link" [href]="social.href" target="_blank">{{ social.title }}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- contact data single item -->
+                                    <div class="col-12 col-md-6 contactdata">
+                                        <div class="contactdata__item contactdata-item-3 block-rounded-l">
+                                            <h5 class="contactdata__title">Contact</h5>
+                                            <div class="contactdata__descr d-flex align-items-start">
+                                                <div class="contactdata__icon">
+                                                    <i class="fa-brands fa-telegram"></i>
+                                                </div>
+                                                <div class="contactdata__text">
+                                                    <p>
+                                                        <a class="contact-link" href="http://t.me/nwhite89" target="_blank">nwhite89</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="contactdata__descr d-flex align-items-start">
+                                                <div class="contactdata__icon">
+                                                    <i class="fa-solid fa-envelope"></i>
+                                                </div>
+                                                <div class="contactdata__text">
+                                                    <a class="contact-link" href="mailto:nickswhite89@gmail.com">nickswhite89@gmail.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section Container - Contact Data End -->
+
+
+                </div>
+            </div>
+            <!-- Contact Section Content End -->
+
+            <!-- Contact Section Media Start -->
+            <div class="col-12 col-xl-4 inner__media">
+
+                <!-- Contact Section Image Background Start -->
+                <div class="image media-image-contact"></div>
+                <!-- Contact Section Image Background End -->
+
+            </div>
+            <!-- Contact Section Media End -->
+
+        </div>
+    </div>
+</section>

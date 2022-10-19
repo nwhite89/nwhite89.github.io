@@ -1,0 +1,58 @@
+.feature
+  margin-bottom: 3rem
+  &:last-of-type
+    margin-bottom: 0
+  +MQ(M)
+    margin-bottom: 0
+
+.feature__item
+  position: relative
+  height: 100%
+  background-color: rgba($white, 0.05)
+  box-shadow: 1px 1px 8px 1px rgb(0 0 0 / 20%)
+  padding: 2rem
+
+.feature__image
+  position: relative
+
+.feature__icon
+  position: absolute
+  +center(y)
+  width: 100%
+  height: auto
+  padding: 1.5rem
+
+.feature__descr
+  margin-top: 2rem
+
+.feature__title
+  font: normal 600 2.4rem/1.2 $default-font
+  color: $text-light
+
+.feature__subtitle
+  display: block
+  position: relative
+  font: normal 600 1.4rem/1.6 $default-font
+  color: $accent-color
+  padding-left: 6rem
+  margin-bottom: 1.2rem
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    +center(y)
+    width: 40px
+    height: 2px
+    border-radius: 2px
+    background-color: $accent-color
+    +gradient-right
+
+.feature__text
+  font: normal 300 1.4rem/1.6 $default-font
+  color: $text-light-base
+  margin-top: 1.3rem
+  +MQ(XXL)
+    font-size: 1.5rem
+  a
+    color: rgba(255, 255, 255, 0.9)

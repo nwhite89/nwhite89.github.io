@@ -1,0 +1,62 @@
+.header
+  +position(fixed, 0 null null 0)
+  width: 100%
+  min-width: 360px
+  z-index: 9
+  background-color: rgba(red, 0.5)
+  padding: 3rem 0
+  background-color: transparent
+  +MQ(M)
+    padding: 5rem 0
+  +MQ(XXL)
+    padding: 6rem 0
+
+.header__content
+  position: relative
+  padding: 0 10%
+  +MQ(XL)
+    padding: 0
+
+.header__logo
+  position: absolute
+  left: 10%
+  +center(y)
+  padding-top: 0.4rem
+  img
+    width: auto
+    max-width: 130px
+  +MQ(XL)
+    padding-top: 0.4rem
+    img
+      width: auto
+      max-width: 164px
+  +MQ(XL)
+    left: 8rem
+  +MQ(XL)
+    img
+      width: auto
+      max-width: none
+  +MQ(XXL)
+    left: 10rem
+
+.header__menu,
+.header__buttons
+  position: relative
+  +MQ(XL)
+    padding: 0 8rem
+  +MQ(XXL)
+    padding: 0 10rem
+
+.inner-controls
+  +position(absolute, 0 0 null null)
+  width: 4.4rem
+  height: 4.4rem
+  +MQ(XL)
+    +position(absolute, 0 9rem null null)
+  +MQ(XXL)
+    +position(absolute, 0 10rem null null)
+
+.about-close,
+.portfolio-close,
+.contact-close
+  +position(absolute, 0 null null 0)

@@ -1,0 +1,75 @@
+.socials-mobile
+  display: block
+  position: relative
+  padding: 3rem 0
+  text-align: center
+  ul
+    display: block
+    padding: 0 3rem
+    li
+      display: inline-block
+      margin-right: 2rem
+      &:last-of-type
+        margin-right: 0
+      a
+        display: block
+        font-size: 1.6rem
+        line-height: 1
+        color: $text-light-base
+  +MQ(M)
+    padding: 5rem 0
+  +MQ(XL)
+    display: none
+
+.socials-menu
+  display: none
+  +MQ(M)
+    display: inline-block
+    ul
+      display: block
+      margin-left: 2.4rem
+      li
+        display: inline-block
+        margin-right: 2rem
+        &:last-of-type
+          margin-right: 0
+        a
+          display: block
+          font-size: 2rem
+          line-height: 1
+          color: $text-light
+          background-image: linear-gradient(to right, tint($accent-color, 40%), tint($accent-color-two, 40%) 50%, $white 50%)
+          background-size: 200% 100%
+          background-position: -100%
+          position: relative
+          -webkit-background-clip: text
+          transition: all 0.3s ease-in-out
+          &:hover
+            color: #f987d6
+
+.socials-desktop
+  display: none
+  +MQ(XL)
+    display: block
+    ul
+      display: block
+      margin-right: 2.4rem
+      li
+        display: inline-block
+        //margin-left: -0.4rem
+        margin-right: 2rem
+        &:last-of-type
+          margin-right: 0
+        a
+          display: block
+          font-size: 2rem
+          line-height: 1
+          color: $text-light
+          background-image: linear-gradient(to right, tint($accent-color, 40%), tint($accent-color-two, 40%) 50%, $white 50%)
+          background-size: 200% 100%
+          background-position: -100%
+          position: relative
+          -webkit-background-clip: text
+          transition: all 0.3s ease-in-out
+          &:hover
+            color: #f987d6

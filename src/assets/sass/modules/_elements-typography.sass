@@ -1,0 +1,265 @@
+h1
+  font: normal 600 3.6rem/1.2 $default-font
+  color: $text-light
+  max-width: 46rem
+  &.large
+    font-size: 5rem
+  +MQ(M)
+    font-size: 5rem
+    max-width: none
+    &.large
+      font-size: 6rem
+  +MQ(XXL)
+    font-size: 6rem
+    &.medium
+      font-size: 6.6rem
+    &.large
+      font-size: 7.6rem
+
+.Typewriter__cursor
+  position: relative
+  display: inline-block
+  white-space: nowrap
+  color: rgba(255,255,255,0)
+  &::before
+    content: ''
+    display: block
+    +position(absolute, null 3px 6px null)
+    width: 2px
+    height: 28px
+    border-radius: 2px
+    background-color: $accent-color
+    +gradient-bottom-light
+  +MQ(M)
+    &::before
+      width: 2px
+      height: 42px
+      +position(absolute, null 6px 10px null)
+  +MQ(XXL)
+    &::before
+      width: 2px
+      height: 56px
+      +position(absolute, null 6px 10px null)
+
+.headline__subtitle
+  display: block
+  position: relative
+  font: normal 600 1.6rem/1 $default-font
+  color: $accent-color
+  margin-top: 1rem
+  padding-left: 8rem
+  margin-bottom: 3rem
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    +center(y)
+    width: 60px
+    height: 2px
+    border-radius: 1px
+    background-color: $accent-color
+    +gradient-right-light
+  +MQ(M)
+    font-size: 1.8rem
+  +MQ(L)
+    padding-top: 0
+  +MQ(XL)
+    margin-top: 0
+  +MQ(XXL)
+    margin-bottom: 4rem
+
+.headline__numblock
+  margin-top: 3.7rem
+  +MQ(XXL)
+    margin-top: 4.2rem
+
+.numblock
+  background-color: rgba($white, 0.05)
+  padding: 2rem
+  margin-right: 2rem
+  &:last-of-type
+    margin-right: 0
+    margin-bottom: 0
+  +MQ(S)
+    margin-bottom: 0
+    &:last-of-type
+      margin-right: 0
+
+.numblock__number
+  display: block
+  font: normal 500 3rem/1 $default-font
+  color: $text-light
+  padding-top: 0.4rem
+  +MQ(S)
+    padding-top: 0.4rem
+    margin-right: 1.2rem
+  +MQ(XXL)
+    font-size: 4rem
+
+.numblock__descr
+  display: block
+  font: normal 300 1.3rem/1.3 $default-font
+  color: $text-light-base
+  margin-top: 0.4rem
+  +MQ(S)
+    margin-top: 0
+  +MQ(XXL)
+    font-size: 1.5rem
+
+h2
+  font: normal 600 3rem/1.2 $default-font
+  color: $text-light
+  +MQ(M)
+    font-size: 4rem
+    max-width: none
+  +MQ(XXL)
+    font-size: 5rem
+
+.section__subtitle
+  display: block
+  position: relative
+  font: normal 600 1.6rem/1 $default-font
+  color: $accent-color
+  margin-top: 1rem
+  padding-left: 8rem
+  margin-bottom: 3rem
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    +center(y)
+    width: 60px
+    height: 2px
+    border-radius: 2px
+    background-color: $accent-color
+    +gradient-right-light
+  +MQ(M)
+    font-size: 1.8rem
+
+.section__text
+  font: normal 300 1.6rem/1.6 $default-font
+  color: $text-light-base
+  margin-top: 2.7rem
+  +MQ(XXL)
+    font-size: 1.8rem
+
+h3
+  font: normal 600 2.6rem/1.2 $default-font
+  color: $text-light
+  margin-bottom: 1.5rem
+  +MQ(M)
+    font-size: 3rem
+    max-width: none
+
+.block__text
+  font: normal 300 1.6rem/1.6 $default-font
+  color: $text-light-base
+  margin-bottom: 2.4rem
+  a
+    font: normal 300 1.6rem/1.6 $default-font
+
+h4
+  font: normal 600 2.4rem/1.2 $default-font
+  color: $text-light
+  small
+    display: block
+    font: normal 300 1.4rem/1.6 $default-font
+  &.dark
+    color: $text-dark
+    small
+      font-weight: 400
+
+h5
+  font: normal 600 2rem/1.6 $default-font
+  color: $text-light
+
+p
+  font: normal 300 1.6rem/1.6 $default-font
+  color: $text-light-base
+  &.copyright
+    font: normal 600 1.4rem/1.6 $default-font
+    color: $text-light-base
+    a
+      position: relative
+      font: normal 600 1.4rem/1.6 $default-font
+      color: $text-light
+      background-image: linear-gradient(to right, tint($accent-color, 20%), tint($accent-color-two, 20%) 50%, $white 50%)
+      background-size: 200% 100%
+      background-position: -100%
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      transition: all 0.3s ease-in-out
+      .no-touch &:hover
+        background-position: 0
+
+a
+  color: $text-light-base
+
+.text-link
+  color: inherit
+  color: $text-light-base
+  text-decoration: none
+  background: linear-gradient(to right, rgba($text-light-base, 0.5), rgba($text-light-base, 0.5)), linear-gradient(to right, rgba($accent-color, 1), rgba($accent-color-two, 1))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: $text-light
+    background-size: 0 1px, 100% 1px
+
+.contact-link
+  color: inherit
+  color: $text-light-base
+  text-decoration: none
+  background: linear-gradient(to right, rgba($text-light-base, 0.0), rgba($text-light-base, 0.0)), linear-gradient(to right, rgba($accent-color, 1), rgba($accent-color-two, 1))
+  background-size: 100% 1px, 0 1px
+  background-position: 100% 100%, 0 100%
+  background-repeat: no-repeat
+  transition: background-size 400ms, color 300ms
+  .no-touch &:hover
+    color: $text-light
+    background-size: 0 1px, 100% 1px
+
+.navigation
+  li
+    display: block
+    margin-bottom: 2rem
+    font: normal 600 3.6rem/1 $default-font
+    &:last-of-type
+      margin-bottom: 0
+    a
+      display: inline-block
+      font: normal 600 3.6rem/1 $default-font
+      color: $text-light
+      background-image: linear-gradient(to right, $accent-color, $accent-color-two 50%, $white 50%)
+      background-size: 200% 100%
+      background-position: -100%
+      position: relative
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      transition: all 0.3s ease-in-out
+      .no-touch &:hover
+        background-position: 0
+  +MQ(M)
+    li
+      a
+        font-size: 5rem
+  +MQ(XXL)
+    li
+      a
+        font-size: 6rem
+
+.popup-title__title
+  font: normal 600 2.6rem/1.2 $default-font
+  color: $text-light
+  margin-bottom: 1.5rem
+  +MQ(M)
+    font-size: 3rem
+
+.popup-title__text
+  font: normal 300 1.6rem/1.6 $default-font
+  color: $text-light-base
+  max-width: 460px

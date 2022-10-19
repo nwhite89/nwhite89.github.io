@@ -1,0 +1,174 @@
+<!-- Menu Start -->
+<nav class="menu" [@openClose]="menuOpen ? true : false" (@openClose.start)="onAnimationEvent($event)" (@openClose.done)="onAnimationEvent($event)">
+    <div class="menu__content">
+        <div class="container-fluid p-0 fullheight">
+            <div class="row g-0 flex-xl-row-reverse fullheight">
+
+                <!--Menu Data Block Start -->
+                <div class="col-12 col-xl-8 menu__data">
+
+                    <!-- Menu Controls Line Start -->
+                    <div class="menudata__controls">
+                        <div class="controls__content">
+                            <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                    <div class="col-8">
+                                        <div class="controls__leftline d-flex justify-content-start align-items-center">
+
+                                            <a class="btn-round-mobile btn-notify btn-light-outline hover-white hover-white-s"
+                                            href="mailto:nickswhite89@gmail.com">
+                                            <em></em>
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <span class="btn-caption">E-mail</span>
+                                        </a>
+
+                                        <!-- Menu Socials Start -->
+                                        <div class="socials-menu">
+                                            <ul>
+                                                <li *ngFor="let social of socials">
+                                                    <a [href]="social.href" target="_blank">
+                                                        <i [class]="social.class"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Menu Socials End -->
+
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="controls__rightline d-flex justify-content-end align-items-center">
+
+                                        <!-- Menu Close Button Start -->
+                                        <a class="section-close hover-white hover-white-s" [class.is-scaled-up]="isFullyOpen" (click)="menuOpen = false;">
+                                            <em></em>
+                                            <span></span>
+                                        </a>
+                                        <!-- Menu Close Button End -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Controls Line End -->
+
+                <!-- Menu Links Start -->
+                <div class="menudata__links">
+                    <div class="container-fluid p-0">
+                        <div class="row g-0 align-items-end">
+                            <div class="col-12 col-md-6">
+
+                                <!-- Navigation Start -->
+                                <ul class="navigation">
+                                    <li *ngFor="let page of pages">
+                                        <a [routerLink]="page.link" (click)="pageChange()">{{ page.label }}</a>
+                                    </li>
+                                </ul>
+                                <!-- Navigation End -->
+
+                            </div>
+                            <div class="col-12 col-md-6">
+
+                                <!-- Menu Contact Links Start -->
+                                <ul class="menulinks__contact">
+                                    <li>
+                                        <p>
+                                            <a class="contact-link" href="https://goo.gl/maps/93JMXgRsa1HkELLz7" target="_blank">London</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <li>
+                                            <p><a class="contact-link" href="https://www.twitter.com/nwhite89" target="_blank">@nwhite89</a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><a class="contact-link" href="mailto:nickswhite89@gmail.com">nickswhite89@gmail.com</a></p>
+                                        </li>
+                                    </ul>
+                                    <!-- Menu Contact Links End -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Menu Data Block End -->
+
+                <!--Menu Media Block Start -->
+                <div class="col-12 col-xl-4 menu__media">
+                    <div class="media__content">
+
+                        <!-- Menu Image Background Start -->
+                        <div class="menu__image menu-image-1"></div>
+                        <!-- Menu Image Background End -->
+
+                    </div>
+                </div>
+                <!--Menu Media Block End -->
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Menu End -->
+
+<!-- Header Start -->
+<header id="header" class="header animate-in">
+
+    <!-- Logo Start -->
+    <a class="header__logo" [routerLink]="['/']" id="logo-trigger">
+        <img src="assets/img/generic/beast.jpg" alt="nwhite89">
+    </a>
+    <!-- Logo End -->
+
+    <!-- Header Content Start -->
+    <div class="header__content fullheight-mobile d-flex align-items-center">
+        <div class="container-fluid px-0">
+            <div class="row gx-0 justify-content-end justify-content-xl-start">
+                <div class="col-auto col-xl-8">
+
+                    <!-- Header Controls Block Start -->
+                    <div class="header__buttons d-flex justify-content-end align-items-center">
+
+                        <!-- Socials Desktop Start -->
+                        <div class="socials-desktop">
+                            <ul>
+                                <li *ngFor="let social of socials">
+                                    <a [href]="social.href" target="_blank">
+                                        <i class="{{ social.class }}"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Socials Desktop End -->
+
+                        <a class="btn-round-mobile btn-notify btn-light-outline hover-white hover-white-s" href="mailto:nickswhite89@gmail.com">
+                        <em></em>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="btn-caption">E-mail</span>
+                    </a>
+
+                </div>
+                <!-- Header Controls Block End -->
+
+            </div>
+            <div class="col-auto col-xl-4">
+
+                <!-- Menu Trigger Start -->
+                <div class="header__menu d-flex justify-content-end">
+                    <button class="menu-trigger" (click)="menuOpen = !menuOpen">
+                        <span class="menu-objects"></span>
+                    </button>
+                </div>
+                <!-- Menu Trigger End -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header Content End -->
+
+</header>
